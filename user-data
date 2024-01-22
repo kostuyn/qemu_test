@@ -1,0 +1,13 @@
+#cloud-config
+
+# https://cloudinit.readthedocs.io/en/latest/reference/modules.html#users-and-groups
+users:
+  - name: vmuser
+    plain_text_passwd: 123456
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZ2uffyx6IblR6dbmdtFdrqdUmH410HW7TsMSnVzsgi9wAjGheG0mYCw+dQHQzmmO+ZIDoIQuF4TE4d1PUdHzErgSkF6PNf/1Hq5+ycDqbg9qWvfsnpfkrZ8ZXkac1cEwvUwP8+aknpUMvdd1Tb1KJGvGbNFgjRWWdmB7QeobweY+6/SoV/c9n0lWRLjzlr/xXwRNgq924DrKVQPXQnoD2UFX/K8QTDaROJ7kh4x/hooPrsp9scfazwMQ+g9FS9isDXnR7HMiuJ2R2LFy4AS3E8Nh4g+3ywYcFMhL2W6ZSVWpTpKHh2x8ac+ZXxl6KTD2HdkPoHoc6Tkr4o4kexpO/ k.altuhov@MacBook-Pro-admin-6.local
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+P9RCi2etwIJ39n37YWHpp/Oo0PcqwNE/rIu54Aym/Sw7Eghi71JJqPd3fBaP6+6H+Yv34BEeshzIshPcmSAl6eI4nN6jKbGcWTaEm4VRjUuK20MApnHrpzQQOGbfwpxLsrXauTLUKKaeV+dTd5in7Z1zcLrNUGLzqoSbHGe8dyLpjVF9tv/vq8kZpzQedNO/s9J8uZkxjU7x/57bLYNeWV0Ip1PYMPJeEtrxJwnRlv0PQZjgbm1VGrS/wCnJG0Ew/9jUSaboxPUW+x9lALtt++vwGtFtb4RRxqHPmDJJgRdpkHo0nk8p8ovAcZeWvBRez9tE7Ywzx+zikq+sfIn38eSVA2XGzVdb76YArX5PcWfPLQtAaOdTfXv2fPxSCqSahJWhZQNHJpKIcvYnUe4B4cVPP6L1vURqC6zwLwlgPdxXyiGRuuZb2IU/uIsXKs2ewgpuJ1y18bDJR4ymgvhCF7kELnhQ6luL02FnxpzYuSKNL/aB7KVqYJeWqY32IuE= kostuyn@kostuyn-comp
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    groups: sudo
+    shell: /bin/bash
+    

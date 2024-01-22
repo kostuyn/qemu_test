@@ -1,6 +1,6 @@
 <pool type="dir">
   <name>pool1</name>
   <target>
-    <path>/home/kostuyn/qemu/pool</path>
+    <path>/var/lib/libvirt/images</path>
   </target>
 </pool>
