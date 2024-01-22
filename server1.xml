@@ -9,7 +9,16 @@
   <os>
     <type arch='x86_64' machine='pc-i440fx-bionic'>hvm</type>
     <boot dev='hd'/>
+    <smbios mode='sysinfo'/>
   </os>
+  <sysinfo type='smbios'>
+    <system>
+      <entry name='serial'>ds=nocloud;s=http://10.0.1.1:8000/__dmi.chassis-serial-number__/</entry>
+    </system>
+    <chassis>
+      <entry name='serial'>000001</entry>
+    </chassis>
+  </sysinfo>
   <features>
     <acpi/>
     <apic/>
