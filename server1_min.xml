@@ -1,0 +1,28 @@
+<domain type='kvm'>
+  <name>server1_min</name>
+  <memory unit='KiB'>2097152</memory>
+  <vcpu placement='static'>2</vcpu>
+  <os>
+    <type>hvm</type>
+    <smbios mode='sysinfo'/>
+  </os>
+  <sysinfo type='smbios'>
+    <system>
+      <entry name='serial'>ds=nocloud;s=http://10.0.1.1:8000/__dmi.chassis-serial-number__/</entry>
+    </system>
+    <chassis>
+      <entry name='serial'>000001</entry>
+    </chassis>
+  </sysinfo>
+  <devices>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='none' io='native'/>
+      <source file='/var/lib/libvirt/images/vol1'/>
+      <target dev='vda' bus='virtio'/>
+    </disk>
+    <interface type='network'>
+      <source network='network1'/>
+    </interface>
+  </devices>
+</domain>
+
